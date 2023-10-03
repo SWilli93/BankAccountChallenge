@@ -6,6 +6,19 @@ public class Account {
     private String customerEmail;
     private String customerPhone;
 
+    public void depositFunds(double depositAmount) {
+        balance += depositAmount;
+        System.out.println("Deposit of $" + depositAmount + " made. New balance is $" + balance);
+    }
+
+    public void withdrawFunds(double withdrawlAmount) {
+        if (balance - withdrawlAmount < 0) {
+            System.out.println("Insufficient Funds! You only have $" + balance + " in your bank account.");
+        } else {
+            balance -= withdrawlAmount;
+            System.out.println("Withdrawal of $" + withdrawlAmount + " processed, Remaining balance = $" + balance);
+        }
+    }
 
     public String getNumber() {
         return number;
