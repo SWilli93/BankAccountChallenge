@@ -6,6 +6,10 @@ public class Account {
     private String customerEmail;
     private String customerPhone;
 
+    public Account() {
+        this("100000", 0, "Default Name", "Default Address", "Default phone");
+    }
+
     public Account(String number, double balance, String customerName, String email, String phone) {
         this.number = number;
         this.balance = balance;
