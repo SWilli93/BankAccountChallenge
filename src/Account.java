@@ -6,6 +6,14 @@ public class Account {
     private String customerEmail;
     private String customerPhone;
 
+    public Account(String number, double balance, String customerName, String email, String phone) {
+        this.number = number;
+        this.balance = balance;
+        this.customerName = customerName;
+        customerEmail = email;
+        customerPhone = phone;
+    }
+
     public void depositFunds(double depositAmount) {
         balance += depositAmount;
         System.out.println("Deposit of $" + depositAmount + " made. New balance is $" + balance);
